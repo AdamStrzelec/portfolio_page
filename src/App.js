@@ -1,5 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
+import HomeSection from './components/HomeSection/HomeSection';
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
@@ -25,6 +26,8 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        
+        <HomeSection />
 
         <GlobalStyle />
       </div>
