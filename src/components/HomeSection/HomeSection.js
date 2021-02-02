@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import home_background from '../../assets/images/home_background.jpg'
+import IntroducePanel from '../IntroducePanel/IntroducePanel';
 
 const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     background-image: url(${home_background});
     background-size: cover;
+    background-position: center;
     position: relative;
 `
 const Content = styled.div`
@@ -21,7 +23,7 @@ const Content = styled.div`
 const HomeSection = () => (
     <Wrapper>
         <Content>
-
+            <IntroducePanel />
         </Content>
     </Wrapper>
 )

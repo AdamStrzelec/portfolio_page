@@ -3,8 +3,8 @@ import { createGlobalStyle } from "styled-components";
 import HomeSection from './components/HomeSection/HomeSection';
 
 const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap'); */
 
   *, *::before, *::after {
     box-sizing: border-box;
