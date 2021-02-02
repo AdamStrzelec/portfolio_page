@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import home_background from '../../assets/images/home_background.jpg'
 import IntroducePanel from '../IntroducePanel/IntroducePanel';
+import SliderImage from '../SliderImage/SliderImage';
 
 const Wrapper = styled.div`
     width: 100vw;
@@ -24,6 +25,7 @@ const HomeSection = () => (
     <Wrapper>
         <Content>
             <IntroducePanel />
+            <SliderImage />
         </Content>
     </Wrapper>
 )

@@ -1,11 +1,9 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
+import { GraphQLClient, ClientContext } from 'graphql-hooks';
 import HomeSection from './components/HomeSection/HomeSection';
 
 const GlobalStyle = createGlobalStyle`
-    /* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap'); */
-
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -21,16 +19,26 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
   }
 `
+
+const client = new GraphQLClient({
+  url: "https://graphql.datocms.com/",
+  headers: {
+    "Authorization": `Bearer ${process.env.REACT_APP_API_DATO_CMS}`,
+  }
+});
+
 class App extends React.Component {
 
   render(){
     return (
-      <div>
-        
-        <HomeSection />
+      <ClientContext.Provider value={client}>
+        <div>
+          
+          <HomeSection />
 
-        <GlobalStyle />
-      </div>
+          <GlobalStyle />
+        </div>
+      </ClientContext.Provider>
     );
   }
 }
