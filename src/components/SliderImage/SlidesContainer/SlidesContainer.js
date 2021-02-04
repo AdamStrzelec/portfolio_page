@@ -8,7 +8,6 @@ const drawSlider = keyframes`
     to{
         opacity: 1;
         transform: scale(1) translateX(-50%);
-        /* transform-origin: center; */
     }
 `
 

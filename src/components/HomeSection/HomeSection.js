@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import home_background from '../../assets/images/home_background.jpg'
 import IntroducePanel from '../IntroducePanel/IntroducePanel';
 import SliderImage from '../SliderImage/SliderImage';
-import Media from './Media/Media';
+import Media from '../Media/Media';
 
 const Wrapper = styled.div`
     width: 100vw;

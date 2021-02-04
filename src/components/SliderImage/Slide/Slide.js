@@ -8,14 +8,14 @@ const Wrapper = styled.div`
     position: absolute;
     top: 0;
     left: calc(50% - 150px);
-    transition: all 0.5s ease-in-out;
-    opacity: 1;
-    ${props => props.slidePosition===1 && 'transform: translateX(88%) scale(0.6); opacity: 0.5'};
-    ${props => props.slidePosition===2 && 'transform: translateX(150%) scale(0.4); opacity: 0.3'};
-    ${props => props.slidePosition>2 && 'transition: all 0.1s ease-in-out; transform: translateX(300%) scale(0.5); opacity: 0'};
-    ${props => props.slidePosition===-1 && 'transform: translateX(-88%) scale(0.6); opacity: 0.5'};
-    ${props => props.slidePosition===-2 && 'transform: translateX(-150%) scale(0.4); opacity: 0.3'};
-    ${props => props.slidePosition<-2 && 'transition: all 0.1s ease-in-out; transform: translateX(-300%) scale(0.5); opacity: 0'};
+    visibility: visible;
+    ${props => props.slidePosition<3&&props.slidePosition>-3 && 'transition: transform 0.5s ease-in-out'};
+    ${props => props.slidePosition===1 && 'transform: translateX(88%) scale(0.6)'};
+    ${props => props.slidePosition===2 && 'transform: translateX(150%) scale(0.4)'};
+    ${props => props.slidePosition>2 && 'transition: all 0.1s ease-in-out; transform: translateX(300%) scale(0.5); visibility: hidden'};
+    ${props => props.slidePosition===-1 && 'transform: translateX(-88%) scale(0.6)'};
+    ${props => props.slidePosition===-2 && 'transform: translateX(-150%) scale(0.4)'};
+    ${props => props.slidePosition<-2 && 'transition: all 0.1s ease-in-out; transform: translateX(-300%) scale(0.5); visibility: hidden'};
 `
 const Name = styled.p`
     color: ${colors.primary};
@@ -24,7 +24,9 @@ const Name = styled.p`
     font-size: 2.5rem;
     text-align: center;
     transform: ${props => props.slidePosition!==0 ? 'translateY(50px); opacity: 0' : 'translateY(0); opacity: 1'};
-    transition: all 0.5s ease-in-out;
+    transition-property: transform opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 `
 const Image = styled.div`
     position: absolute;
