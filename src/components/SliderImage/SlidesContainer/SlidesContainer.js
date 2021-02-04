@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Slide from '../Slide/Slide';
 import Button from '../SetImageButton/SetImageButton';
 import { getRelativePositionOfIndex } from '../../../utils/getRelativePositionOfIndex';
+
+const drawSlider = keyframes`
+    to{
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+        /* transform-origin: center; */
+    }
+`
 
 const Wrapper = styled.div`
     width: 100%;
@@ -10,9 +18,12 @@ const Wrapper = styled.div`
     height: 45vh;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: scale(0.3) translateX(-50%);
+    transform-origin: left;
     bottom: 100px;
     overflow: hidden;
+    opacity: 0;
+    animation: ${drawSlider} 1s 3.5s forwards;
 `
 const ButtonsWrapper = styled.div`
     display: flex;

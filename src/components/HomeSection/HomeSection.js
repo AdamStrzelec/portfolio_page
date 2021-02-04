@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     background-size: cover;
     background-position: center;
     position: relative;
+    overflow: hidden;
 `
 const Content = styled.div`
     position: absolute;

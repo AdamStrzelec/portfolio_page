@@ -3,15 +3,22 @@ import styled, { keyframes } from 'styled-components';
 import TextContainer from './TextCotainer/TextContainer';
 import ImageContainer from './ImageContainer/ImageCotainer';
 
+const movePanel = keyframes`
+    to{
+        transform: translateX(-50%) translateY(70px);
+    }
+`
+
 const Wrapper = styled.div`
     position: absolute;
-    top: 70px;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(calc(50vh - 50px));
     background-color: #3D3D3D;
     color: white;
     border-radius: 50px;
     overflow: hidden;
+    animation: ${movePanel} 1s 3.5s forwards;
 `
 const resize = keyframes`
     from {
