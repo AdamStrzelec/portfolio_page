@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../Navigation';
 import Navlist from './NavList/NavList';
-import { colors } from '../../../Colors';
+import { colors } from '../../../colors';
 
 const Wrapper = styled.div`
     width: 200px;
