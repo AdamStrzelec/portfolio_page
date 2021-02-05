@@ -1,7 +1,10 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import { GraphQLClient, ClientContext } from 'graphql-hooks';
+import Navigation from './components/Navigation/Navigation';
 import HomeSection from './components/HomeSection/HomeSection';
+import { Provider } from 'react-redux'
+import store from './store'
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -31,14 +34,21 @@ class App extends React.Component {
 
   render(){
     return (
-      <ClientContext.Provider value={client}>
-        <div>
-          
-          <HomeSection />
+      <Provider store={store}>
+        <ClientContext.Provider value={client}>
+          <div>
+            
+            <HomeSection sectionId={'home'} />
+            <h1 id='about'>asdsadsda</h1>
+            <h1 id='projects'>asdsadsda</h1>
+            <h1 id='technologies'>asdsadsda</h1>
+            <h1 id='contact'>asdsadsda</h1>
+            <Navigation />
+            <GlobalStyle />
+          </div>
+        </ClientContext.Provider>
+      </Provider>
 
-          <GlobalStyle />
-        </div>
-      </ClientContext.Provider>
     );
   }
 }

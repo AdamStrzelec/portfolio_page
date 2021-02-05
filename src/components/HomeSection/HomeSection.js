@@ -6,7 +6,7 @@ import SliderImage from '../SliderImage/SliderImage';
 import Media from '../Media/Media';
 
 const Wrapper = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(${home_background});
     background-size: cover;
@@ -23,8 +23,8 @@ const Content = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
 `
 
-const HomeSection = () => (
-    <Wrapper>
+const HomeSection = ({ sectionId }) => (
+    <Wrapper id={sectionId}>
         <Content>
             <IntroducePanel />
             <SliderImage />
