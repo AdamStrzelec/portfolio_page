@@ -6,6 +6,7 @@ import store from './store'
 import Navigation from './components/Navigation/Navigation';
 import HomeSection from './components/HomeSection/HomeSection';
 import Section from './components/Section/Section';
+import AboutSection from './components/AboutSection/AboutSection';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -41,7 +42,7 @@ class App extends React.Component {
             
             <HomeSection sectionId={'home'} />
             <Section sectionId={'about'} header={'O MNIE'} heading={'Adam Strzelec'}>
-              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+              <AboutSection />
             </Section>
             <Section sectionId={'projects'} header={'PROJEKTY'} heading={'Adam Strzelec'}>
               <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
