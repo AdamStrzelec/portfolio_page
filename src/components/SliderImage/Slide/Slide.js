@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../../Colors';
+import { colors } from '../../../colors';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

@@ -22,12 +22,12 @@ const NavBackground = styled.div`
 
 const Navbar = () => {
 
-    const { isNavMenuOpen, isDarkModeOpen } = useContext(NavContext);
+    const { isNavMenuOpen, isDarkModeOpen, changeMenuVisibility } = useContext(NavContext);
 
     return(
         <Wrapper>
             <NavBackground isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen}/>
-            <Navlist isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen}/>
+            <Navlist isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen} changeMenuVisibility={changeMenuVisibility}/>
         </Wrapper>
     )
 }

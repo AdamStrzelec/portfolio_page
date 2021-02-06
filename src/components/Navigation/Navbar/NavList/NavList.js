@@ -41,14 +41,14 @@ const StyledAnchorLink = styled(AnchorLink)`
     }
 `
 
-const Navlist = ({isNavMenuOpen, isDarkModeOpen}) => (
+const Navlist = ({isNavMenuOpen, isDarkModeOpen, changeMenuVisibility}) => (
     <Wrapper>
         <List>
-            <ListItem isNavMenuOpen={isNavMenuOpen} number={0}><StyledAnchorLink href='#home'  isDarkModeOpen={isDarkModeOpen}>HOME</StyledAnchorLink></ListItem>
-            <ListItem isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen} number={1}><StyledAnchorLink href='#about' isDarkModeOpen={isDarkModeOpen}>O MNIE</StyledAnchorLink></ListItem>
-            <ListItem isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen} number={2}><StyledAnchorLink href='#projects' isDarkModeOpen={isDarkModeOpen}>PROJEKTY</StyledAnchorLink></ListItem>
-            <ListItem isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen} number={3}><StyledAnchorLink href='#technologies' isDarkModeOpen={isDarkModeOpen}>TECHNOLOGIE</StyledAnchorLink></ListItem>
-            <ListItem isDarkModeOpen={isDarkModeOpen} isNavMenuOpen={isNavMenuOpen} number={4}><StyledAnchorLink href='#contact' isDarkModeOpen={isDarkModeOpen}>KONTAKT</StyledAnchorLink></ListItem>
+            <ListItem isNavMenuOpen={isNavMenuOpen} number={0}><StyledAnchorLink href='#home' isDarkModeOpen={isDarkModeOpen} onClick={()=>changeMenuVisibility(false)}>HOME</StyledAnchorLink></ListItem>
+            <ListItem isNavMenuOpen={isNavMenuOpen} number={1}><StyledAnchorLink href='#about' isDarkModeOpen={isDarkModeOpen} onClick={()=>changeMenuVisibility(false)}>O MNIE</StyledAnchorLink></ListItem>
+            <ListItem isNavMenuOpen={isNavMenuOpen} number={2}><StyledAnchorLink href='#projects' isDarkModeOpen={isDarkModeOpen} onClick={()=>changeMenuVisibility(false)}>PROJEKTY</StyledAnchorLink></ListItem>
+            <ListItem isNavMenuOpen={isNavMenuOpen} number={3}><StyledAnchorLink href='#technologies' isDarkModeOpen={isDarkModeOpen} onClick={()=>changeMenuVisibility(false)}>TECHNOLOGIE</StyledAnchorLink></ListItem>
+            <ListItem isNavMenuOpen={isNavMenuOpen} number={4}><StyledAnchorLink href='#contact' isDarkModeOpen={isDarkModeOpen} onClick={()=>changeMenuVisibility(false)}>KONTAKT</StyledAnchorLink></ListItem>
         </List>
     </Wrapper>
 )

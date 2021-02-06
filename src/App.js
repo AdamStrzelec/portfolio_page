@@ -1,10 +1,11 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import { GraphQLClient, ClientContext } from 'graphql-hooks';
-import Navigation from './components/Navigation/Navigation';
-import HomeSection from './components/HomeSection/HomeSection';
 import { Provider } from 'react-redux'
 import store from './store'
+import Navigation from './components/Navigation/Navigation';
+import HomeSection from './components/HomeSection/HomeSection';
+import Section from './components/Section/Section';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -39,10 +40,18 @@ class App extends React.Component {
           <div>
             
             <HomeSection sectionId={'home'} />
-            <h1 id='about'>asdsadsda</h1>
-            <h1 id='projects'>asdsadsda</h1>
-            <h1 id='technologies'>asdsadsda</h1>
-            <h1 id='contact'>asdsadsda</h1>
+            <Section sectionId={'about'} header={'O MNIE'} heading={'Adam Strzelec'}>
+              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+            </Section>
+            <Section sectionId={'projects'} header={'PROJEKTY'} heading={'Adam Strzelec'}>
+              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+            </Section>
+            <Section sectionId={'technologies'} header={'TECHNOLOGIE'} heading={'Technologie, których używam'}>
+              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+            </Section>
+            <Section sectionId={'contact'} header={'KONTAKT'}>
+              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+            </Section>
             <Navigation />
             <GlobalStyle />
           </div>
