@@ -8,6 +8,7 @@ import HomeSection from './components/HomeSection/HomeSection';
 import Section from './components/Section/Section';
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
+import TechnologiesSection from './components/TechnologiesSection/TechnologiesSection';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -52,12 +53,15 @@ class App extends React.Component {
             </Section>
 
             <Section sectionId={'technologies'} header={'TECHNOLOGIE'} heading={'Technologie, których używam'}>
-              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+              <TechnologiesSection />
             </Section>
+
             <Section sectionId={'contact'} header={'KONTAKT'}>
               <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
             </Section>
+
             <Navigation />
+
             <GlobalStyle />
           </div>
         </ClientContext.Provider>
