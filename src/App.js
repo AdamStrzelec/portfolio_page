@@ -9,6 +9,7 @@ import Section from './components/Section/Section';
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import TechnologiesSection from './components/TechnologiesSection/TechnologiesSection';
+import ContactSection from './components/ContactSection/ContactSection';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -57,7 +58,7 @@ class App extends React.Component {
             </Section>
 
             <Section sectionId={'contact'} header={'KONTAKT'}>
-              <p>cos tam cos tam dsadassad dsaasdas dsaasdas dassaddas dsaasd dsasaddsa</p>
+              <ContactSection />
             </Section>
 
             <Navigation />
