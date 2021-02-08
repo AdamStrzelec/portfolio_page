@@ -2,21 +2,32 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../../Navigation';
 import { colors } from '../../../../colors';
+import { sizes } from '../../../../screenSizes';
 
 const Button = styled.button`
     width: 36px;
     height: 35px;
     position: relative;
     cursor: pointer;
-    border-radius: 50%;
     outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
     background-color: black;
     border: 2px solid ${colors.primary};
+    @media(min-width: ${sizes.tablet}){
+
+        border: none;
+        background-color: transparent;
+    }
 `
 const MenuCloseLine = styled.span`
     position: absolute;
     top: ${props => props.number * 7 + 'px'};
     left: 7px;
+    @media(min-width: ${sizes.tablet}){
+        background-color: ${props => props.isDarkModeOpen ? colors.primary : colors.background_secondary};
+    }
     width: 19px;
     height: 3px;
     background-color: ${colors.primary};
@@ -30,7 +41,10 @@ const MenuCloseLine = styled.span`
 `
 const MenuOpenLine = styled.span`
     position: absolute;
-
+    @media(min-width: ${sizes.tablet}){
+        background-color: ${props => props.isDarkModeOpen ? colors.primary : colors.background_secondary};
+    }
+    transition-property: transform;
     width: 24px;
     height: 3px;
     background-color: ${colors.primary};
@@ -62,15 +76,15 @@ const MenuOpenLineTwo = styled(MenuOpenLine)`
 `
 
 const MenuButton = () => {
-    const { isNavMenuOpen, changeMenuVisibility } = useContext(NavContext);
+    const { isNavMenuOpen, changeMenuVisibility, isDarkModeOpen } = useContext(NavContext);
     return(
         <Button onClick={changeMenuVisibility}>
-            <MenuCloseLine number={1} isNavMenuOpen={isNavMenuOpen}/>
-            <MenuCloseLine number={2} isNavMenuOpen={isNavMenuOpen}/>
-            <MenuCloseLine number={3} isNavMenuOpen={isNavMenuOpen}/>
+            <MenuCloseLine number={1} isNavMenuOpen={isNavMenuOpen} isDarkModeOpen={isDarkModeOpen}/>
+            <MenuCloseLine number={2} isNavMenuOpen={isNavMenuOpen} isDarkModeOpen={isDarkModeOpen}/>
+            <MenuCloseLine number={3} isNavMenuOpen={isNavMenuOpen} isDarkModeOpen={isDarkModeOpen}/>
 
-            <MenuOpenLineOne isNavMenuOpen={isNavMenuOpen}/>
-            <MenuOpenLineTwo isNavMenuOpen={isNavMenuOpen}/>
+            <MenuOpenLineOne isNavMenuOpen={isNavMenuOpen} isDarkModeOpen={isDarkModeOpen}/>
+            <MenuOpenLineTwo isNavMenuOpen={isNavMenuOpen} isDarkModeOpen={isDarkModeOpen}/>
         </Button>
     )
 }

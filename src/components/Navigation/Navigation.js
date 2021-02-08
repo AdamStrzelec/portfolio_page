@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
 import Navbar from './Navbar/Navbar';
+import RightPanel from './RightPanel/RightPanel';
 import { connect } from 'react-redux';
 
 const navState = {
@@ -51,8 +52,9 @@ const Navigation = ({ handleDarkModeOpenAction }) => {
             changeDarkModeOpen
         }}>
             <div ref={navRef}>
-                <HamburgerMenu/>
                 <Navbar/>
+                <RightPanel />
+                <HamburgerMenu/>                
             </div>
         </NavContext.Provider>
     )

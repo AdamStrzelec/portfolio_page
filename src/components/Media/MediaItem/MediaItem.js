@@ -3,29 +3,34 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { colors } from '../../../colors';
+import { connect } from 'react-redux';
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-    color: ${colors.primary};
+    color: ${props => props.isDarkModeOpen ? colors.primary : colors.background_secondary};
     font-size: 2.4rem;
     cursor: pointer;
     :hover{
-        color: white;
+        color: ${colors.secondary};
     }
 `
 
-const MediaItem = ({ linkedin, github }) =>(
+const MediaItem = ({ linkedin, github, isDarkModeOpen }) =>(
     <>
         {linkedin &&
             <a href={'https://www.linkedin.com/in/adam-strzelec-356b01201'} rel="noreferrer" target='_blank'>
-                <StyledFontAwesomeIcon icon={faLinkedin}/>
+                <StyledFontAwesomeIcon icon={faLinkedin} isDarkModeOpen={isDarkModeOpen}/>
             </a>
         }
         {github &&
             <a href={'https://github.com/AdamStrzelec'} rel="noreferrer" target='_blank'>
-                <StyledFontAwesomeIcon icon={faGithubSquare} />
+                <StyledFontAwesomeIcon icon={faGithubSquare} isDarkModeOpen={isDarkModeOpen}/>
             </a>
         }
     </>
 ) 
 
-export default MediaItem;
+const mapStateToProps = ({ isDarkModeOpen }) => ({
+    isDarkModeOpen
+})
+
+export default connect(mapStateToProps)(MediaItem);

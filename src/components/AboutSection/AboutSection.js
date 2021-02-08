@@ -16,8 +16,6 @@ const AboutSection = () => {
 
     const { loading, error, data } = useQuery(ABOUT_QUERY);
 
-
-
     return(
         <div>
             {(loading || error) ? null : 

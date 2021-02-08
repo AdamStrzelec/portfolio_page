@@ -28,7 +28,6 @@ const HomeSection = ({ sectionId }) => (
         <Content>
             <IntroducePanel />
             <SliderImage />
-            <Media />
         </Content>
     </Wrapper>
 )

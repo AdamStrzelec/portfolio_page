@@ -22,7 +22,7 @@ const ListItem = styled.li`
     margin-top: 50px;
     font-family: 'Black Ops One', cursive;
     font-size: 1.8rem;
-    ${props => props.isNavMenuOpen ? 'transform: translateX(100%)' : 'transform: translateX(0)'};
+    ${props => props.isNavMenuOpen ? 'transform: translateX(-100%)' : 'transform: translateX(0)'};
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(.46,1.55,.97,.97);

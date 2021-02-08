@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { GraphQLClient, ClientContext } from 'graphql-hooks';
 import { Provider } from 'react-redux'
 import store from './store'
+import MainTemplate from './templates/MainTemplate';
 import Navigation from './components/Navigation/Navigation';
 import HomeSection from './components/HomeSection/HomeSection';
 import Section from './components/Section/Section';
@@ -41,7 +42,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <ClientContext.Provider value={client}>
-          <div>
+          <MainTemplate>
             
             <HomeSection sectionId={'home'} />
 
@@ -64,7 +65,7 @@ class App extends React.Component {
             <Navigation />
 
             <GlobalStyle />
-          </div>
+          </MainTemplate>
         </ClientContext.Provider>
       </Provider>
 
