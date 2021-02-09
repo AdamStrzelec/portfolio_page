@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Paragraph from '../Paragraph/Paragraph';
-import { sizes } from '../../screenSizes';
+import { sizes } from '../../screenSizes/index';
 import { colors } from '../../colors';
 
 const Wrapper = styled.div`

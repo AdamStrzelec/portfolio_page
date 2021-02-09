@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { colors } from '../../../colors';
-import { sizes } from '../../../screenSizes';
+import { sizes } from '../../../screenSizes/index';
 
 const ContentWrapper = styled.div`
     @media(max-width: ${sizes.mobile}){

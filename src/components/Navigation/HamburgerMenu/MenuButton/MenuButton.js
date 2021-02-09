@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../../Navigation';
 import { colors } from '../../../../colors';
-import { sizes } from '../../../../screenSizes';
+import { sizes } from '../../../../screenSizes/index';
 
 const Button = styled.button`
     width: 36px;
