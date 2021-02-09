@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 const client = new GraphQLClient({
   url: "https://graphql.datocms.com/",
   headers: {
-    "Authorization": `Bearer ${process.env.REACT_APP_API_DATO_CMS}`,
+    "Authorization": `Bearer 5f48aab63332993d77baeeba4213d9`,
   }
 });
 
