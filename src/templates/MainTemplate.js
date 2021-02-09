@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { sizes } from '../screenSizes';
+import { sizes } from '../screenSizes/index';
 
 const Wrapper = styled.div`
     width: 100%;
