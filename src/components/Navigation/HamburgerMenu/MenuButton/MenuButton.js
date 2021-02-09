@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../../Navigation';
-import { colors } from '../../../../colors';
+import { colors } from '../../../../colors/colors';
 import { sizes } from '../../../../screenSizes/sizes';
 
 const Button = styled.button`

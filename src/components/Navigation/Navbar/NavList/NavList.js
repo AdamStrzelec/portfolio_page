@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../../../colors';
+import { colors } from '../../../../colors/colors';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Wrapper = styled.div`

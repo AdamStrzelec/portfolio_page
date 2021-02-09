@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../Navigation';
 import { sizes } from '../../../screenSizes/sizes';
-import { colors } from '../../../colors';
+import { colors } from '../../../colors/colors';
 import ChangeModePanel from '../ChangeModePanel/ChangeModePanel';
 import Media from '../../Media/Media';
 
