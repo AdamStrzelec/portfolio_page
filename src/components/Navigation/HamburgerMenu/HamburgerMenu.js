@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MenuButton from './MenuButton/MenuButton';
-import { sizes } from '../../../screenSizes/index';
+import { sizes } from '../../../screenSizes/sizes';
 
 const Wrapper = styled.div`
     position: fixed;

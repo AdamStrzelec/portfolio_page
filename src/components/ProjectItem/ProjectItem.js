@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { colors } from '../../colors';
-import { sizes } from '../../screenSizes/index';
+import { sizes } from '../../screenSizes/sizes';
 import ProjectItemName from './ProjectItemName/ProjectItemName';
 import ProjectTechnologies from './ProjectTechnologies/ProjectTechnologies';
 import ProjectDescription from './ProjectDescription/ProjectDescription';

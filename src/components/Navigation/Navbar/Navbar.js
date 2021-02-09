@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { NavContext } from '../Navigation';
 import Navlist from './NavList/NavList';
 import { colors } from '../../../colors';
-import { sizes } from '../../../screenSizes/index';
+import { sizes } from '../../../screenSizes/sizes';
 import ChangeModePanel from '../ChangeModePanel/ChangeModePanel';
 
 const Wrapper = styled.div`
