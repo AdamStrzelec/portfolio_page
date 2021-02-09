@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { colors } from '../../colors';
+import { colors } from '../../colors/colors';
 
 const StyledButton = styled.button`
     font-family: 'Black Ops One', cursive;

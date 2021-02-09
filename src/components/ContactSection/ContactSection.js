@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Paragraph from '../Paragraph/Paragraph';
 import { sizes } from '../../screenSizes/sizes';
-import { colors } from '../../colors';
+import { colors } from '../../colors/colors';
 
 const Wrapper = styled.div`
     @media(min-width: ${sizes.mobile}){

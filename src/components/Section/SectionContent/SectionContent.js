@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../../../colors';
+import { colors } from '../../../colors/colors';
 import { sizes } from '../../../screenSizes/sizes';
 
 const ContentWrapper = styled.div`
